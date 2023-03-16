@@ -13,7 +13,7 @@ function handleGetData(event) {
     event.preventDefault();
     userInput = $input.val();
 $.ajax({
-    url:`https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=b7819fb3ac46283d9eac8fba5a615b18`
+    url:`https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=b7819fb3ac46283d9eac8fba5a615b18&units=imperial`
 
 
 }).then(
@@ -33,10 +33,15 @@ function render() {
     $humidity.text(weatherData.main.humidity)
 }
 
+// const convert = function(k) {
+//     let f = (k - 273.15)*1.8 + 32;
+//     return `${f.toFixed(2)}`;
+// }
 
-// url:`https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${apiKey}`
-
-
-// api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=b7819fb3ac46283d9eac8fba5a615b18
+// const convert = function(k) {
+//     let f = (k - 273.15)*1.8 + 32;
+//     return f.toFixed(2);
+// }
 
 // b7819fb3ac46283d9eac8fba5a615b18
+
